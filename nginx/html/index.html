@@ -19,23 +19,38 @@
 
         h1 {
             font-size: 50px;
+            margin-bottom: 40px;
+            /* space below h1 */
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+            /* space below h2 */
         }
 
         p {
             font-size: 20px;
             opacity: 0.8;
+            margin-bottom: 50px;
+            /* space below paragraph */
         }
 
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            margin-top: 20px;
             background: white;
             color: #2a5298;
             text-decoration: none;
             border-radius: 30px;
             font-weight: bold;
             transition: 0.3s;
+            position: fixed;
+            /* fixed at bottom */
+            bottom: 40px;
+            /* distance from bottom */
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .btn:hover {
@@ -54,13 +69,15 @@
 
 <body>
     <div class="container">
-        <h1>Building a Secure Web Server</h1>
+        <h1>Building A Secure Web Server Using Only HTTPS</h1>
         <h2>Group 6</h2>
         <p>NGINX running behind Traefik with HTTPS</p>
-        <a class="btn" href="http://localhost:8080">View Traefik Dashboard</a>
     </div>
+
+    <a class="btn" href="https://traefik.localhost/dashboard/">View Traefik Dashboard</a>
+
     <footer>
-        Docker • Traefik • NGINX • HTTPS
+        >Docker >Traefik >NGINX >HTTPS
     </footer>
 </body>
 

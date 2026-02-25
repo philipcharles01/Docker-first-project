@@ -1,19 +1,16 @@
 entryPoints:
-  web:
-    address: ":80"
   websecure:
     address: ":443"
 
+providers:
+  docker:
+    exposedByDefault: false
+
 api:
   dashboard: true
-  insecure: true
-
-providers:
-  file:
-    filename: /certs/dynamic.yml
-    watch: true
+  insecure: false  # do NOT use the insecure dashboard
 
 tls:
   certificates:
-    - certFile: /certs/traefik.crt
-      keyFile: /certs/traefik.key
+    - certFile: /certs/cert.pem
+      keyFile: /certs/key.pem
